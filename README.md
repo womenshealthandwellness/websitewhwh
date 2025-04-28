@@ -20,5 +20,3 @@ A responsive web platform built for the UTM Women's Health & Wellness Hub. This 
 
 No special installation required!  
 Simply clone the repository and open the website locally.
-
-https://youtu.be/uTXSA_ggm7Y
