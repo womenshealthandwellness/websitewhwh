@@ -12,9 +12,9 @@ A responsive web platform built for the UTM Women's Health & Wellness Hub. This 
 
 ## Preview
 
-[![Watch the demo](https://img.youtube.com/vi/uTXSA_ggm7Y/0.jpg)](https://youtu.be/uTXSA_ggm7Y)
+[![Watch the demo](https://img.youtube.com/vi/anLauqH3yPE/0.jpg)](https://youtu.be/anLauqH3yPE)
 
-▶️ [Click here to watch the website demo](https://youtu.be/uTXSA_ggm7Y)
+▶️ [Click here to watch the updated website demo](https://youtu.be/anLauqH3yPE)
 
 ## Getting Started
 
