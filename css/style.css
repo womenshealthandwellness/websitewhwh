@@ -261,6 +261,7 @@ a:focus {
 
 .slider_section .img_container .img-box img {
   width: 100%;
+  object-fit: cover;
 }
 
 .category-box {
