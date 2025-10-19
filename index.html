@@ -29,10 +29,12 @@
 </head>
 
 <body>
-
+ 
+  <div id="event-banner-placeholder"></div>
+  <div id="navbar-placeholder"></div>
   <div class="hero_area">
     <!-- header section strats -->
-    <div id="navbar-placeholder"></div>
+   
    
   
     <section class=" slider_section ">
@@ -132,6 +134,35 @@
       })
       .catch(error => console.error("Error loading navbar:", error));
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM loaded, fetching banner...");
+  fetch("event-banner.html")
+    .then(response => {
+      console.log("Fetch status:", response.status);
+      return response.text();
+    })
+    .then(data => {
+      console.log("Fetched banner content:", data.slice(0, 50)); 
+      const placeholder = document.getElementById("event-banner-placeholder");
+      placeholder.innerHTML = data;
+
+      const banner = document.getElementById("event-banner");
+      const closeBtn = document.getElementById("close-banner");
+
+      // Slide banner down after inserting it
+      setTimeout(() => {
+        banner.style.transform = "translateY(0)";
+      }, 100);
+
+      // Close button
+      closeBtn.addEventListener("click", () => {
+        banner.style.transform = "translateY(-100%)";
+      });
+    })
+    .catch(err => console.error("Error fetching banner:", err));
+});
+</script>
 
 </body>
 

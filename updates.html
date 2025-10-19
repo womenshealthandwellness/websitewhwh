@@ -29,6 +29,7 @@
 </head>
 
 <body class="sub_page">
+  <div id="event-banner-placeholder"></div>
 
   <div class="hero_area">
       <div id="navbar-placeholder"></div>
@@ -49,7 +50,8 @@
          
       </div>
       <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPMSsobkQKw/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width: 100px; max-width: 100%;"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP97sZpD6Fp/" data-instgrm-version="14" style="width: 100px; max-width: 100%;"></blockquote>
+
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOuaWJnkTmS/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width: 100px; max-width: 100%;"></blockquote>
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DOzB3j2D7ir/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width: 100px; max-width: 100%;"></blockquote>
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDD00MtNzCo/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width: 100px; max-width: 100%;"></blockquote>
@@ -116,6 +118,30 @@
       })
       .catch(error => console.error("Error loading navbar:", error));
   </script>
+  <script>
+  // Load the event banner
+  fetch("event-banner.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("event-banner-placeholder").innerHTML = data;
+
+      // Once loaded, activate animation + close button
+      const banner = document.getElementById("event-banner");
+      const closeBtn = document.getElementById("close-banner");
+
+      if (!localStorage.getItem("eventBannerClosed")) {
+        setTimeout(() => {
+          banner.style.transform = "translateY(0)";
+        }, 300);
+      }
+
+      closeBtn.addEventListener("click", () => {
+        banner.style.transform = "translateY(-100%)";
+        localStorage.setItem("eventBannerClosed", "true");
+      });
+    })
+    .catch(err => console.error("Error loading event banner:", err));
+</script>
 
 
 </body>
