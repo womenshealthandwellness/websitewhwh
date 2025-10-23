@@ -80,7 +80,7 @@
 }
 
 /* Mobile View */
-@media (max-width: 850px) {
+@media (max-width: vertical-viewport-segments) {
   .navbar-links {
     position: fixed;
     top: 0;
