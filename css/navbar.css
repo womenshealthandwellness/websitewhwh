@@ -30,6 +30,10 @@
 
 .navbar-brand {
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
   align-items: center;
   font-weight: 600;
   color: rgb(109, 67, 0);
