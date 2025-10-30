@@ -123,13 +123,16 @@ a:focus {
   border: none;
 }
 
+@media (max-width: 576px){
 .navbar-brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  word-wrap: break-word; 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
 }
 
 .navbar-brand img {
