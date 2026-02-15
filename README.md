@@ -1,20 +1,16 @@
-# UTM Women's Health & Wellness Hub Website (websitewhwh)
+# React + Vite
 
-A responsive web platform built for the UTM Women's Health & Wellness Hub. This website connects students to health and wellness resources, promotes events, and fosters community engagement.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- 📸 Integrated Instagram feed to showcase updates and events
-- 📝 Membership form for students to join WHWH initiatives and mailing lists
-- 📚 Resource library with curated health and wellness materials
-- 👩‍💻 About Us section introducing the WHWH team and mission
-- 🌐 Fully responsive design for desktop and mobile access
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Preview
+## React Compiler
 
-▶️ [Click here to watch the updated website demo](https://youtu.be/anLauqH3yPE)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Getting Started
+## Expanding the ESLint configuration
 
-No special installation required!  
-Simply clone the repository and open the website locally.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
