@@ -447,15 +447,18 @@ img {
 }
 
 .slider_image_container {
-    height: 80vh;
-    /* Floating style */
-    width: 80%;
+    height: 60vh;
+    /* Reduced from 80vh */
+    width: 75%;
+    /* Reduced from 80% */
     position: relative;
     border-radius: 30px 100px 30px 100px;
     /* Organic shape */
     box-shadow: 0 30px 60px rgba(74, 59, 50, 0.15);
     overflow: hidden;
     animation: float 6s ease-in-out infinite;
+    margin-top: 40px;
+    /* Add top margin for navbar spacing */
 }
 
 .slider_image_container img {

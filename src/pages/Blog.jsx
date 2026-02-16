@@ -18,26 +18,33 @@ const Blog = () => {
         <section id="blog" className="section-padding bg-white">
             <div className="container-full">
                 <div className="heading_container text-center mb-5">
-                    <h2>Our Blog</h2>
-                    <p>Latest news and articles from our team</p>
+                    <h2>Latest from Our Blog</h2>
+                    <p>Insights and resources for women's health and wellness</p>
                 </div>
 
-                <div className="blog-grid" style={{ justifyContent: 'center', display: 'flex' }}>
+                {/* Featured Post Layout */}
+                <div className="featured-blog-container">
                     {posts.map(post => (
-                        <div key={post.id} className="blog-card-wrapper" style={{ maxWidth: '400px' }}>
-                            <div className="blog-card">
-                                <div className="blog-img">
-                                    <img src={post.image} alt={post.title} />
-                                </div>
-                                <div className="blog-content">
-                                    <h5>{post.title}</h5>
-                                    <p className="small text-muted mb-3">{post.date}</p>
-                                    <p>{post.excerpt}</p>
-                                    <a href={post.link} target="_blank" rel="noopener noreferrer" className="btn-custom" style={{ padding: '10px 25px', fontSize: '0.9rem' }}>Read PDF</a>
-                                </div>
+                        <div key={post.id} className="featured-blog-card">
+                            <div className="featured-blog-image">
+                                <img src={post.image} alt={post.title} />
+                                <div className="featured-blog-badge">Featured Post</div>
+                            </div>
+                            <div className="featured-blog-content">
+                                <p className="featured-blog-date">{post.date}</p>
+                                <h3 className="featured-blog-title">{post.title}</h3>
+                                <p className="featured-blog-excerpt">{post.excerpt}</p>
+                                <a href={post.link} target="_blank" rel="noopener noreferrer" className="btn-custom">
+                                    Read Full Article
+                                </a>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Coming Soon Message */}
+                <div className="blog-coming-soon">
+                    <p>📝 More articles coming soon! Stay tuned for updates on women's health, wellness tips, and community resources.</p>
                 </div>
             </div>
         </section>
